@@ -3,7 +3,6 @@ body {
     background: white;
     margin: 0px;
     font-family: "Chakra Petch", sans-serif;
-    margin-bottom: 100px;
 }
 
 header {
@@ -31,6 +30,10 @@ h1 {
 
 p {
     font-size: 20px;
+}
+
+img {
+    height: 200px;
 }
 
 .categoria-videos {
