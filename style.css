@@ -11,6 +11,7 @@ header {
     padding: 20px;
     font-size: 32px;
     color: rgba(255, 255, 255, 1);
+    background-color: rgba(238, 110, 255, 0.8); /* Nova cor de fundo */
 }
 
 .chamada {
@@ -19,6 +20,8 @@ header {
     padding-top: 80px;
     display: flex;
     justify-content: center;
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centralizar */
 }
 
 .chamada-texto {
@@ -31,12 +34,14 @@ h1 {
 
 p {
     font-size: 20px;
+    line-height: 1.5; /* Espaçamento entre linhas */
 }
 
 .categoria-videos {
     display: flex;
     overflow-x: auto;
     gap: 10px;
+    padding: 0 20px; /* Espaçamento lateral */
 }
 
 .categoria {
@@ -48,6 +53,7 @@ p {
 .categoria-videos img {
     opacity: 0.5;
     height: 200px;
+    transition: opacity 0.3s ease-in-out; /* Transição suave */
 }
 
 .categoria-videos img:hover {
@@ -56,5 +62,4 @@ p {
 }
 
 .categoria h2 {
-    color: rgba(209, 80, 248, 0.28);
-}
+    color: rgba(209, 80, 248, 0.8); /* Cor mais forte */
