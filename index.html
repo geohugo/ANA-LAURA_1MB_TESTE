@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -18,34 +19,46 @@
         </div>
 
         <div>
-            <iframe width="560" height="315" src="https://youtu.be/xXmS7XytWVk?si=whA25ry18f0gK0TF"
+            <iframe id="videoAtual" width="560" height="315" src="https://www.youtube.com/embed/xXmS7XytWVk"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                allowfullscreen></iframe>
         </div>
     </section>
 
     <section class="categoria">
-        <h2>Videos sobre o assunto</h2>
+        <h2>Vídeos sobre o assunto</h2>
         <div class="categoria-videos">
-            <a href="https://www.youtube.com/watch?v=eKFyyWnyiFA">
+            <a href="#" data-video="eKFyyWnyiFA">
                 <img src="https://img.youtube.com/vi/eKFyyWnyiFA/maxresdefault.jpg" />
             </a>
-            <a href="https://www.youtube.com/watch?v=G7PigwyIfHs">
+            <a href="#" data-video="G7PigwyIfHs">
                 <img src="https://img.youtube.com/vi/G7PigwyIfHs/maxresdefault.jpg" />
             </a>
-            <a href="https://www.youtube.com/watch?v=60O96bI30xk">
+            <a href="#" data-video="60O96bI30xk">
                 <img src="https://img.youtube.com/vi/60O96bI30xk/maxresdefault.jpg" />
             </a>
-            <a href="https://www.youtube.com/watch?v=ieNh2kmxhIs">
+            <a href="#" data-video="ieNh2kmxhIs">
                 <img src="https://img.youtube.com/vi/ieNh2kmxhIs/maxresdefault.jpg" />
             </a>
-            <a href=https://www.youtube.com/watch?v=OHpOkFAWwLg">
+            <a href="#" data-video="OHpOkFAWwLg">
                 <img src="https://img.youtube.com/vi/OHpOkFAWwLg/maxresdefault.jpg" />
             </a>
         </div>
     </section>
 
+    <script>
+        const linksVideos = document.querySelectorAll('.categoria-videos a');
+        const videoAtual = document.getElementById('videoAtual');
+
+        linksVideos.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const idVideo = this.dataset.video;
+                videoAtual.src = `https://www.youtube.com/embed/${idVideo}`;
+            });
+        });
+    </script>
 </body>
 
 </html>
